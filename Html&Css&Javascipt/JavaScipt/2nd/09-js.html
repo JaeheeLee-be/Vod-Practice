@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Comatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 메소드 및 속성</title>
+</head>
+<body>
+  <h1 id="song-title" class="heading" title="미스터 션샤인 수록 OST">
+    <span>어찌 잊으오</span>
+  </h1>
+  <p class="lyrics">
+    누군가 물었소 뭘 그리 찾는지.. 황량한 이 들판에 찾는 이라도 있소
+  </p>
+  <p class="lyrics">
+    그댄 본 적 있소? 세상이 다 맑아질.. 어떤 이의 웃음을 나는 알고 있소
+  </p>
+  <script>
+    console.log(document.querySelector(".lyrics"))
+    console.log(
+    document.getElementsByClassName("lyrics")
+    )
+    const title = document.getElementById("song-title")
+    console.log(title)
+
+    console.log(title.textContent)
+    console.log(title.innerText)
+    console.log(title.className)
+    console.log(title.style)
+    console.log(title)
+  </script>
+</body>
+</html>
