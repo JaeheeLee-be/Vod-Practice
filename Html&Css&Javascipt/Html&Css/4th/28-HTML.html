@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>겹치거나 넘치는 요소 다루기</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+    /* z-index는 position 지정 요소들끼리의 z축 순서를 정한다. 쌓인 순서를 정한다. 값을 상대적으로 비교  
+    z-index 값을 높게 할수록 위쪽에 위치한다. 값은 최소1이다. */
+    .div1{ background-color: orange; 
+      z-index: 99;
+      overflow: auto; /* hidden: 범위를 벗어난 것을 안보이게 해줌
+      scroll: 넘치는 것을 스크롤을 생성하여 볼 수 있게끔 해줌 auto: 알아서 처리해 주세요 */
+    }
+    .div2{ background-color: red; bottom: 50px; z-index: 3; }
+    .div3{ background-color: purple; bottom: 100px; z-index: 2; }
+    .div4{ background-color: green; bottom: 150px; z-index: 1; }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    orangeorangeorangeorangeorange
+    orangeorangeorangeorangeorange
+    orangeorangeorangeorangeorange
+    orangeorangeorangeorangeorange
+    orangeorangeorangeorangeorange
+    orangeorangeorangeorangeorange
+  </div>
+  <div class="div2">2</div>
+  <div class="div3">3</div>
+  <div class="div4">4</div>
+</body>
+</html>

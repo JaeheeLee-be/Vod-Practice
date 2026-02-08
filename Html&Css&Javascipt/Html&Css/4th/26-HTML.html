@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서의 흐름</title>
+  <style>
+    .container{
+      height: 400px;
+      border: 1px solid black;
+    }
+    #first{
+      float: right; /* first는 문서의 오른쪽에 위치하게 된다. */
+    }
+
+    #second{
+      float: left;
+      /* float: right; second도 right 값을 주었는데 이때 위치는 right에서 left 기준에서 first 다음 오른쪽에 붙는다. */
+    }
+
+    p{
+      clear: both; /* 양쪽의 float을 무시하기 때문에 float 사이에 있던 <p> 태그가 빠져나온다. */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="first"
+    src="images/wonyoung jang2.png" width="160">
+    <img id="second"
+    src="images/wonyoung jang2.png" width="160">
+    <p>
+      장원영은 아이브 그룹에 소속되어 있고 4세대 걸그룹이다.
+      아이브 멤ß버 중에서도 장원영은 엄청 돋보이는 존재이며,
+      사랑스럽고 귀엽다.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 더 알아보기</title>
+  <style>
+    /*
+    기호와 함께 사용하는 속성 선택자
+    * : 값의 포함 여부 ex) *= width 갯수에 포함하면 적용, 포함하지 않으면 미적용
+    ^ : 값의 시작 여부 ex) ^= 시작이니 값은 1
+    $ : 값의 끝 여부 ex) $= 끝이니 값은 0
+    */
+    [width $= "0"]{ /* 태그가 없어도 쓸 수가 있다. ex) [alt]{} / width로 변경시 전체다 적용 */
+      border: 5px dashed red;
+    }
+
+    body em{ /* body에 들어있는 어떤 태그 (중첩단계가 몇단계 일지라도 이 선택자는 사용가능) */
+      color: blue;
+    }
+
+    /* p > em{ 하위요소 선택하기: p밑에 있는 em 중에서 한단계만 선택한다. ex)부모자식요소: p em: p 밑에 있는 em
+      color: blue; } */
+/* 
+    #sam ~ p{  모든형제 선택자(이미지의 모든형제는 선택), 인접형제 선택자: #sam + p sam의 인접한 형제를 나타냅니다.
+      color: orange;
+    } */
+
+    /* #sam ~ img{ #sam ~ p: p형제는 스타일이 적용되는데, img형제는 적용이 안된다. (형제선택자는 뒤이어 등장하는 형제들을 대상으로 한다.)
+      display: none;
+    } */
+  </style>
+</head>
+<body>
+  <img src="images/Wonyoung Jang.jpg" width="120" alt="원영">
+  <img src="images/wonyoung jang2.png" width="120">
+  <img src="images/wonyoung jang3.jpg" width="120" id="sam">
+  <p>장원영은 걸그룹 아이브 소속이다.</p>
+  <p>아이브는 한국 걸그룹이다.</p>
+  <p>장원영은 <em>한국과 대만</em>의 혼혈이다.</p>
+  <p>사랑스럽고 이쁘다.</p>
+</body>
+</html>

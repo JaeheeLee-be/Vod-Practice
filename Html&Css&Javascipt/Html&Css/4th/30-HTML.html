@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>의사 클래스 & 의사 요소</title>
+  <style>
+    .meun{
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+
+    .meun > li{
+      display: inline-block;
+      text-align: center;
+    }
+
+    li > a{
+      display: inline-block;
+      width: 80px;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    a:hover{ /* a태그에 마우스를 얹었을 때 폰트색이 변하고 배경색도 변함 */
+      color: white;
+      background-color: gray;
+    }
+
+    a:active{ /* 액티브 일 때 폰트와 배경색이 변함 */
+      color: white;
+      background-color: black;
+    }
+
+    li:nth-child(n){ /* nth-child 3번째 li에 값을 부여, ex) (n = 모두, 2n = 2의 배수만, 2n-1 = 홀수만) */
+      font-size: 20px;
+    }
+
+    a::after{ /* 추가 및 스타일링 가능 a보다 뒤에 after, a보다 앞에 before */
+      content: "보기";
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <ul class="meun">
+    <li><a href="#">사전</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">증권</a></li>
+    <li><a href="#">지도</a></li>
+  </ul>
+</body>
+</html>
