@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 꾸미기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    *{
+      /* font-family:  Arial, monospace; 2개의 글꼴을 넣었을 경우 지원하지 않은 글꼴 외에 다른 글꼴이 적용된다. */
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    html{
+      font-size: 8px;
+    }
+
+    body{
+      font-size: 32px;
+    }
+
+    #first{
+      font-size: 3rem; /* html이 기본값이고 id를 지정한 값만큼 곱해진다. */
+      font-weight: 100; /* 글자 두께: 보통 100~900으로 설정 폰트마다 다름 */
+      line-height: 16px; /* 행 높이: 텍스트 간의 간격 */
+      text-align: justify; /* 글의 정렬 위치: justify(양끝 정렬) ,left, right, center 등 */
+    }
+  </style>
+</head>
+<body>
+  <p id="first">에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+  <p>에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+</body>
+</html>

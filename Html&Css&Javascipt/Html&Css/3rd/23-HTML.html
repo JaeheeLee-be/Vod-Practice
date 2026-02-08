@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>색깔을 지정하는 다양한 방법</title>
+  <style>
+    p#one{
+      color: rgb(0%, 50%, 0%); /* 첫번째 값: red, 두번째 값: green, 세번째 값: blue */
+      /* opacity: 0.5; 이 방법으로 투명도를 조정할 수도 있다. */
+    }
+    p#two{
+      color: rgba(0%, 50%, 0%, 0.5); /* 마지막 값은 0~1 사이의 값*/
+    }
+    p#three{
+      color: hsl(300, 50%, 80%, 0.3); /* 첫번째 값: 색조, 두번째 값: 채도, 세번째 값: 조도 */
+    }
+    p#four{
+      color: #FF00FF99; /* rgb 색상코드: 두자리씩 red, green, blue, 마지막 두 자리는 투명도 */
+      /*
+        0 1 2 3 4 5 6 7 8 9 A B C D E F (한 자리수 기준: F는 숫자 15와 같다.)
+        00 ~ FF (두 자리수 기준: F다음 10 11 12 .....으로 최종이 FF는 255와 같다.)
+      */
+    }
+  </style>
+</head>
+<body>
+  <p id="one">고소한 아몬드와 함께 여는 아침</p>
+  <p id="two">고소한 아몬드와 함께 여는 아침</p>
+  <p id="three">고소한 아몬드와 함께 여는 아침</p>
+  <p id="four">고소한 아몬드와 함께 여는 아침</p>
+</body>
+</html>

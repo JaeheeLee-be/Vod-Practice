@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여백 다루기</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+
+      margin: 10px 20px 30px 40px;
+      /* 
+      top bottem left right
+      */
+      padding-top: 20px;
+      padding-right: 50px;
+      /*
+      box-sizing: content-box; 기본이며 width와 height 크기에 나머지를 더함 (전체적으로 박스가 커짐)
+      */
+
+      box-sizing: border-box; /* width와 height 크기에서 나머지 값을 양보함 (박스 크기 고정) */
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
