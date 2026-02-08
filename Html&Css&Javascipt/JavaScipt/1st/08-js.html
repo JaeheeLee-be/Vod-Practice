@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Comatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 소개 & 콘텐츠 변경하기</title>
+</head>
+<body>
+  
+  <p>장원영은 섹시하다</p>
+  <p class="comment">장원영은 귀엽다</p>
+  <p class="comment" id="lovely">장원영은 사랑스럽다</p>
+
+  <script>
+    // 입력 - 처리 - 출력
+    const p1 = document.querySelector("p")
+    const p2 = document.querySelector(".comment")
+    const p3 = document.querySelector("#lovely")
+    
+    console.log(p1.textContent)
+    console.log(p2.textContent)
+    console.log(p3.textContent)
+
+    p1.textContent = "카리나의 등장입니다."
+    p2.textContent = "히나의 등장입니다."
+    p3.textContent = "쵸단의 등장입니다."
+
+  </script>
+</body>
+</html>
